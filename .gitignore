@@ -1,2 +1,2 @@
-www/mapasculturais/*
+www/*
 .docker/services/postgresql/data/pgdata
