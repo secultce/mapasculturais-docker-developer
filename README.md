@@ -30,7 +30,7 @@
 	docker-compose -f docker-compose.yml up
 
 
-# ATENÇÃO: O comando do item 9 acima só funcionará se: 
+# ATENÇÃO: O comando do item 9 só funcionará se: 
 
   1 - Seu docker estiver rodando na máquina.
 
