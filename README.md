@@ -1,4 +1,4 @@
-# WINDOWS # LINUX
+# WINDOWS e LINUX
 
 # PASSO A PASSO:
 
@@ -20,7 +20,7 @@
 7 - Entre na pasta “SECULT-MAPAS-DOCKER” e clone o projeto que se encontra nesse repositório:
 
 
-        7.1 - “git clone https://github.com/secultce/mapasculturais-docker-developer.git”
+        git clone https://github.com/secultce/mapasculturais-docker-developer.git
 
 
 8 - Entre na pasta “mapasculturais-docker-developer” e verifique se existe um diretório na raiz do projeto chamado “www”, se não existir, criar um diretório com o nome “www”.
