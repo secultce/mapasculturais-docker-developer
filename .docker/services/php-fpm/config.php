@@ -7,12 +7,13 @@ $site_description = 'O Mapa Cultural do Ceará é a plataforma livre, gratuita e
 $base_domain = @$_SERVER['HTTP_HOST'];
 $base_url = 'http://' . $base_domain . '/';
 $map_latitude = '-5.058114374355702';
-$map_longitude = '-39.4134521484375' ;
+$map_longitude = '-39.4134521484375';
 $map_zoom = '7';
 
 date_default_timezone_set('America/Fortaleza');
 
-return array_merge($config,
+return array_merge(
+    $config,
     [
         'app.useAssetsUrlCache' => 1,
         'app.siteName' => \MapasCulturais\i::__($site_name),
@@ -29,7 +30,7 @@ return array_merge($config,
         'base.assetUrl' => $base_url . 'assets/',
         'base.url' => $base_url,
 
-        /* Habilitar configurações importantes da aplicação: [development, staging, production] */ 
+        /* Habilitar configurações importantes da aplicação: [development, staging, production] */
         'app.mode' => 'development',
         'app.enabled.seals'   => true,
         'app.enabled.apps' => false,
@@ -40,7 +41,7 @@ return array_merge($config,
 
         /* Doctrine configurations */
         'doctrine.isDev' => false,
-        
+
         /* ==================== LOGS ================== */
         #'slim.debug' => false,
         #'slim.log.enabled' => true,
@@ -69,18 +70,19 @@ return array_merge($config,
         'mailer.port'   => '2525',
         'mailer.from' => 'naoresponda@secult.ce.gov.br',
 
-        'plugins' => array_merge( $config['plugins'],
+        'plugins' => array_merge(
+            $config['plugins'],
             [
                 'MultipleLocalAuth' => ['namespace' => 'MultipleLocalAuth'],
-		        'EvaluationMethodSimple' => ['namespace' => 'EvaluationMethodSimple'],
+                'EvaluationMethodSimple' => ['namespace' => 'EvaluationMethodSimple'],
                 'EvaluationMethodDocumentary' => ['namespace' => 'EvaluationMethodDocumentary'],
                 'EvaluationMethodTechnical' => ['namespace' => 'EvaluationMethodTechnical'],
             ]
         ),
         /*	Esse módulo é para configurar a funcionalidade de denúncia e/ou sugestões */
         'module.CompliantSuggestion' => [
-                'compliant' => false,
-                'suggestion' => false
+            'compliant' => false,
+            'suggestion' => false
         ],
 
         // Token da API de Cep
@@ -89,24 +91,24 @@ return array_merge($config,
 
         //'auth.provider' => 'Fake',
         /* configuração de provedores Auth para Login */
-         'auth.provider' => '\MultipleLocalAuth\Provider',
-         'auth.config' => [
-             'salt' => 'LT_SECURITY_SALT_SECURITY_SALT_SECURITY_SALT_SECURITY_SALT_SECU',
-             'timeout' => '24 hours',
-             'enableLoginByCPF' => true,
-             'metadataFieldCPF' => 'documento',
-             'userMustConfirmEmailToUseTheSystem' => false,
-             'passwordMustHaveCapitalLetters' => true,
-             'passwordMustHaveLowercaseLetters' => true,
-             'passwordMustHaveSpecialCharacters' => true,
-             'passwordMustHaveNumbers' => true,
-             'minimumPasswordLength' => 7,
-             'google-recaptcha-secret' => '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
-             'google-recaptcha-sitekey' => '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
-             'sessionTime' => 7200, // int , tempo da sessao do usuario em segundos
-             'numberloginAttemp' => '5', // tentativas de login antes de bloquear o usuario por X minutos
-             'timeBlockedloginAttemp' => '900', // tempo de bloqueio do usuario em segundos
-             'strategies' => [],        
+        'auth.provider' => '\MultipleLocalAuth\Provider',
+        'auth.config' => [
+            'salt' => 'LT_SECURITY_SALT_SECURITY_SALT_SECURITY_SALT_SECURITY_SALT_SECU',
+            'timeout' => '24 hours',
+            'enableLoginByCPF' => true,
+            'metadataFieldCPF' => 'documento',
+            'userMustConfirmEmailToUseTheSystem' => false,
+            'passwordMustHaveCapitalLetters' => true,
+            'passwordMustHaveLowercaseLetters' => true,
+            'passwordMustHaveSpecialCharacters' => true,
+            'passwordMustHaveNumbers' => true,
+            'minimumPasswordLength' => 7,
+            'google-recaptcha-secret' => '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
+            'google-recaptcha-sitekey' => '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+            'sessionTime' => 7200, // int , tempo da sessao do usuario em segundos
+            'numberloginAttemp' => '5', // tentativas de login antes de bloquear o usuario por X minutos
+            'timeBlockedloginAttemp' => '900', // tempo de bloqueio do usuario em segundos
+            'strategies' => [],
         ],
 
         'doctrine.database' => [
@@ -118,4 +120,3 @@ return array_merge($config,
         ],
     ]
 );
-
