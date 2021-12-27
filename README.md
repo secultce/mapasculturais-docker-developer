@@ -32,11 +32,11 @@
 
 # ATENÇÃO: O comando do item 9 só funcionará se: 
 
-  1 - Seu docker estiver rodando na máquina.
+	  1 - Seu docker estiver rodando na máquina.
 
-  2 - Se caso use o visual studio code, ele precisa está com o padrão “LF” para sistemas linux(pesquisar como configurar).
+	  2 - Se caso use o visual studio code, ele precisa está com o padrão “LF” para sistemas linux(pesquisar como configurar).
 
-  3 - O  processo de subir a aplicação via docker pode demorar dependendo da sua internet e do seu computador.   
+	  3 - O  processo de subir a aplicação via docker pode demorar dependendo da sua internet e do seu computador.   
 
 10 - Abra o navegador em localhost:8080 e espere até a aplicação subir. 
 
