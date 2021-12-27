@@ -27,15 +27,16 @@
 
 9 - Após executar todos os passos acima, via cmd, volte para a raiz do projeto “mapasculturais-docker-developer” e execute o seguinte comando: 
 
-12.1 - “docker-compose -f docker-compose.yml up”
-	
-     ATENÇÃO: O comando acima só funcionará se: 
+	docker-compose -f docker-compose.yml up
 
-          1 - Seu docker estiver rodando na máquina.
 
-          2 - Se caso use o visual studio code, ele precisa está com o padrão “LF” para sistemas linux(pesquisar como configurar).
+# ATENÇÃO: O comando do item 9 acima só funcionará se: 
 
-          3 - O  processo de subir a aplicação via docker pode demorar dependendo da sua internet e do seu computador.   
+  1 - Seu docker estiver rodando na máquina.
+
+  2 - Se caso use o visual studio code, ele precisa está com o padrão “LF” para sistemas linux(pesquisar como configurar).
+
+  3 - O  processo de subir a aplicação via docker pode demorar dependendo da sua internet e do seu computador.   
 
 10 - Abra o navegador em localhost:8080 e espere até a aplicação subir. 
 
