@@ -1,12 +1,14 @@
 #!/bin/bash
 set -e
-if [ ! -f /.deployed ]; then
 
-    #instala o mapas
+FOLDER=/var/www/html/mapasculturais
+
+#instalando mapas e plugins essenciais
+if [[ ! -d $FOLDER ]]; then 
     cd /var/www/html
     git clone https://github.com/secultce/mapasculturais.git
     cd mapasculturais
-    git checkout homolog
+    git checkout production
 
     #permissão root para pasta mapas
     chmod 777 /var/www/html/mapasculturais/
@@ -21,9 +23,20 @@ if [ ! -f /.deployed ]; then
     #instala o plugin de authentication    
     cd /var/www/html/mapasculturais/src/protected/application/plugins
     git clone  https://github.com/secultce/plugin-MultipleLocalAuth.git MultipleLocalAuth
+fi
 
-    #habilita o locale para região de forteleza
+cd /var/www/html/mapasculturais/src/protected
+rm -rf ./DoctrineProxies
+mkdir DoctrineProxies
+chmod 777 DoctrineProxies
 
+cd /var/www/html/mapasculturais/scripts
+./deploy.sh
+
+#permissão root para pasta mapas
+chmod 777 /var/www/html/mapasculturais/
+
+if [ ! -f /.deployed ]; then
     echo "LC_ALL=en_US.UTF-8" >> /etc/environment
     echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
     echo "LANG=en_US.UTF-8" > /etc/locale.conf
@@ -31,17 +44,6 @@ if [ ! -f /.deployed ]; then
     touch /.deployed
 fi
 
-#criar os proxies do banco de dados
-cd /var/www/html/mapasculturais/src/protected
-rm -rf ./DoctrineProxies
-mkdir DoctrineProxies
-chmod 777 DoctrineProxies
-
-#starta a aplicação
-cd /var/www/html/mapasculturais/scripts
-./deploy.sh
-
-#starta o cron da aplicação php
 nohup /recreate-pending-pcache-cron.sh &
 
 exec "$@"

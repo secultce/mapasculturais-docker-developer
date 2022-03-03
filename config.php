@@ -89,28 +89,28 @@ return array_merge(
         // Adquirido ao fazer cadastro em http://www.cepaberto.com/
         'cep.token' => '1a61e4d00bf9c6a85e3b696ef7014372',
 
-        'auth.provider' => 'Fake',
+        //'auth.provider' => 'Fake',
 
         /* configuração de provedores Auth para Login */
-        //'auth.provider' => '\MultipleLocalAuth\Provider',
-        //  'auth.config' => [
-        //      'salt' => 'LT_SECURITY_SALT_SECURITY_SALT_SECURITY_SALT_SECURITY_SALT_SECU',
-        //      'timeout' => '24 hours',
-        //      'enableLoginByCPF' => true,
-        //      'metadataFieldCPF' => 'documento',
-        //      'userMustConfirmEmailToUseTheSystem' => false,
-        //      'passwordMustHaveCapitalLetters' => true,
-        //      'passwordMustHaveLowercaseLetters' => true,
-        //      'passwordMustHaveSpecialCharacters' => true,
-        //      'passwordMustHaveNumbers' => true,
-        //      'minimumPasswordLength' => 7,
-        //      'google-recaptcha-secret' => '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
-        //      'google-recaptcha-sitekey' => '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
-        //      'sessionTime' => 7200, // int , tempo da sessao do usuario em segundos
-        //      'numberloginAttemp' => '5', // tentativas de login antes de bloquear o usuario por X minutos
-        //      'timeBlockedloginAttemp' => '900', // tempo de bloqueio do usuario em segundos
-        //      'strategies' => [],        
-        // ],
+        'auth.provider' => '\MultipleLocalAuth\Provider',
+        'auth.config' => [
+            'salt' => 'LT_SECURITY_SALT_SECURITY_SALT_SECURITY_SALT_SECURITY_SALT_SECU',
+            'timeout' => '24 hours',
+            'enableLoginByCPF' => true,
+            'metadataFieldCPF' => 'documento',
+            'userMustConfirmEmailToUseTheSystem' => false,
+            'passwordMustHaveCapitalLetters' => true,
+            'passwordMustHaveLowercaseLetters' => true,
+            'passwordMustHaveSpecialCharacters' => true,
+            'passwordMustHaveNumbers' => true,
+            'minimumPasswordLength' => 7,
+            'google-recaptcha-secret' => '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
+            'google-recaptcha-sitekey' => '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+            'sessionTime' => 7200, // int , tempo da sessao do usuario em segundos
+            'numberloginAttemp' => '5', // tentativas de login antes de bloquear o usuario por X minutos
+            'timeBlockedloginAttemp' => '900', // tempo de bloqueio do usuario em segundos
+            'strategies' => [],
+        ],
 
         'doctrine.database' => [
             'dbname'    => 'mapasculturais',
