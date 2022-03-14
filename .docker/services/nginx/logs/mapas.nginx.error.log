@@ -4196,3 +4196,653 @@ PHP message: PHP   9. Slim\Route->dispatch() /var/www/html/mapasculturais/src/pr
 PHP message: PHP  10. call_user_func_array:{/var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
 PHP message: PHP  11. MapasCulturais\RoutesManager->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/RoutesManager.php:41-123}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
 PHP message: PHP  12. MapasCulturais\RoutesManager->callAction() /var/www/h
+2022/03/14 03:15:12 [error] 8#8: *20 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'ReportEvaluationsDocumental' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/contents/DocumentalPDF.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. MapasCulturais\App->run() /var/www/html/mapasculturais/src/index.php:4
+PHP message: PHP   3. MapasCulturais\App->run() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:572
+PHP message: PHP   4. Slim\Middleware\PrettyExceptions->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1300
+PHP message: PHP   5. MapasCulturais\Middlewares\ExecutionTime->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php:67
+PHP message: PHP   6. Slim\Middleware\MethodOverride->call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Middlewares/ExecutionTime.php:44
+PHP message: PHP   7. Slim\Middleware\Flash->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/MethodOverride.php:92
+PHP message: PHP   8. MapasCulturais\App->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/Flash.php:85
+PHP message: PHP   9. Slim\Route->dispatch() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1355
+PHP message: PHP  10. call_user_func_array:{/var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  11. MapasCulturais\RoutesManager->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/RoutesManager.php:41-123}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  12. MapasCulturais\RoutesManager->callAction() /var/www/h
+2022/03/14 03:17:33 [error] 8#8: *20 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type Ceara\Theme as array in /var/www/html/mapasculturais/src/protected/application/plugins/Report/layouts/parts/reports/ReportButton.php:8
+Stack trace:
+#0 /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Theme.php(360): include()
+#1 /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Theme.php(387): MapasCulturais\Theme->partialRender('reports/ReportB...', Array, true)
+#2 /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php(31): MapasCulturais\Theme->part('reports/ReportB...', Array)
+#3 [internal function]: Report\Plugin->Report\{closure}()
+#4 /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php(1493): call_user_func_array(Object(Closure), Array)
+#5 /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Theme.php(608): MapasCulturais\App->applyHookBoundTo(Object(Ceara\Theme), 'template(opport...', Array)
+#6 /var/www/" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /oportunidade/1544 HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080"
+2022/03/14 03:28:17 [error] 8#8: *54 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 03:28:17 [error] 8#8: *54 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 03:28:17 [error] 8#8: *54 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 03:37:07 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 03:37:07 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 03:37:07 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 03:37:43 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 03:37:43 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 03:37:43 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 03:37:53 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 03:37:53 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 03:37:53 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 03:38:41 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 03:38:41 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 03:38:42 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:01:17 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:01:17 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:01:17 [error] 8#8: *66 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:05:07 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Notice:  Uninitialized string offset: 0 in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php on line 1405
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:470
+PHP message: PHP   5. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:19
+PHP message: PHP   6. Report\Plugin->_init() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Module.php:33
+PHP message: PHP   7. MapasCulturais\App->hook() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:43" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /oportunidade/1544 HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080"
+2022/03/14 04:05:07 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Notice:  Uninitialized string offset: 0 in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php on line 1542
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:470
+PHP message: PHP   5. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:19
+PHP message: PHP   6. Report\Plugin->_init() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Module.php:33
+PHP message: PHP   7. MapasCulturais\App->hook() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:43
+PHP message: PHP   8. MapasCulturais\App->_compileHook() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1413" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /oportunidade/1544 HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080"
+2022/03/14 04:05:10 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1405) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /oportunidade/1544 HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080"
+2022/03/14 04:05:10 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1405) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /oportunidade/1544 HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080"
+2022/03/14 04:05:10 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Notice:  Uninitialized string offset: 0 in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php on line 1405
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:470
+PHP message: PHP   5. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:19
+PHP message: PHP   6. Report\Plugin->_init() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Module.php:33
+PHP message: PHP   7. MapasCulturais\App->hook() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:43" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/evaluationCommittee/?@limit=50&@opportunity=1544&@page=1 HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:10 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Notice:  Uninitialized string offset: 0 in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php on line 1542
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:470
+PHP message: PHP   5. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:19
+PHP message: PHP   6. Report\Plugin->_init() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Module.php:33
+PHP message: PHP   7. MapasCulturais\App->hook() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:43
+PHP message: PHP   8. MapasCulturais\App->_compileHook() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1413" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/evaluationCommittee/?@limit=50&@opportunity=1544&@page=1 HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:10 [error] 8#8: *124 FastCGI sent in stderr: "PHP message: PHP Notice:  Uninitialized string offset: 0 in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php on line 1405
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:470
+PHP message: PHP   5. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:19
+PHP message: PHP   6. Report\Plugin->_init() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Module.php:33
+PHP message: PHP   7. MapasCulturais\App->hook() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:43" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/findEvaluations/?@limit=50&@opportunity=1544&@order=evaluation+desc&@page=1&@select=id,singleUrl,category,owner.%7Bid,name,singleUrl%7D,consolidatedResult,evaluationResultString,status, HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:10 [error] 8#8: *124 FastCGI sent in stderr: "PHP message: PHP Notice:  Uninitialized string offset: 0 in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php on line 1542
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:470
+PHP message: PHP   5. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:19
+PHP message: PHP   6. Report\Plugin->_init() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Module.php:33
+PHP message: PHP   7. MapasCulturais\App->hook() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:43
+PHP message: PHP   8. MapasCulturais\App->_compileHook() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1413" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/findEvaluations/?@limit=50&@opportunity=1544&@order=evaluation+desc&@page=1&@select=id,singleUrl,category,owner.%7Bid,name,singleUrl%7D,consolidatedResult,evaluationResultString,status, HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:11 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1405) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/evaluationCommittee/?@limit=50&@opportunity=1544&@page=1 HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:11 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1405) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/evaluationCommittee/?@limit=50&@opportunity=1544&@page=1 HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:12 [error] 8#8: *124 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1405) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/findEvaluations/?@limit=50&@opportunity=1544&@order=evaluation+desc&@page=1&@select=id,singleUrl,category,owner.%7Bid,name,singleUrl%7D,consolidatedResult,evaluationResultString,status, HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:12 [error] 8#8: *124 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1405) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/findEvaluations/?@limit=50&@opportunity=1544&@order=evaluation+desc&@page=1&@select=id,singleUrl,category,owner.%7Bid,name,singleUrl%7D,consolidatedResult,evaluationResultString,status, HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:12 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Notice:  Uninitialized string offset: 0 in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php on line 1405
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:470
+PHP message: PHP   5. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:19
+PHP message: PHP   6. Report\Plugin->_init() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Module.php:33
+PHP message: PHP   7. MapasCulturais\App->hook() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:43" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/findRegistrations/?@files=(zipArchive):url&@limit=50&@opportunity=1544&@page=1&@select=id,singleUrl,category,status,owner.%7Bid,name,singleUrl%7D,consolidatedResult,evaluationResultString,field_5384,field_5385,field_5382,field_5395,field_5394,field_5383&status=GT(-1) HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:12 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Notice:  Uninitialized string offset: 0 in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php on line 1542
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:470
+PHP message: PHP   5. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:19
+PHP message: PHP   6. Report\Plugin->_init() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Module.php:33
+PHP message: PHP   7. MapasCulturais\App->hook() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:43
+PHP message: PHP   8. MapasCulturais\App->_compileHook() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1413" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/findRegistrations/?@files=(zipArchive):url&@limit=50&@opportunity=1544&@page=1&@select=id,singleUrl,category,status,owner.%7Bid,name,singleUrl%7D,consolidatedResult,evaluationResultString,field_5384,field_5385,field_5382,field_5395,field_5394,field_5383&status=GT(-1) HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:12 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1405) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/findRegistrations/?@files=(zipArchive):url&@limit=50&@opportunity=1544&@page=1&@select=id,singleUrl,category,status,owner.%7Bid,name,singleUrl%7D,consolidatedResult,evaluationResultString,field_5384,field_5385,field_5382,field_5395,field_5394,field_5383&status=GT(-1) HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:12 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1405) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/opportunity/findRegistrations/?@files=(zipArchive):url&@limit=50&@opportunity=1544&@page=1&@select=id,singleUrl,category,status,owner.%7Bid,name,singleUrl%7D,consolidatedResult,evaluationResultString,field_5384,field_5385,field_5382,field_5395,field_5394,field_5383&status=GT(-1) HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:05:17 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Notice:  Uninitialized string offset: 0 in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php on line 1405
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:470
+PHP message: PHP   5. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:19
+PHP message: PHP   6. Report\Plugin->_init() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Module.php:33
+PHP message: PHP   7. MapasCulturais\App->hook() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:43" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:05:17 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Notice:  Uninitialized string offset: 0 in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php on line 1542
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:470
+PHP message: PHP   5. Report\Plugin->__construct() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:19
+PHP message: PHP   6. Report\Plugin->_init() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Module.php:33
+PHP message: PHP   7. MapasCulturais\App->hook() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:43
+PHP message: PHP   8. MapasCulturais\App->_compileHook() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1413" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:05:17 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1405) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:05:17 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:1405) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:14:17 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:14:17 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:14:17 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:15:23 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:15:23 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:15:23 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:15:52 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:15:52 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:15:52 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:16:17 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:16:17 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:16:17 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "GET /api/notification/find/?&@select=id,status,isRequest,createTimestamp,message,approveUrl,request.{permissionTo.{approve,reject},requesterUser}&user=eq(@me)&@ORDER=createTimestamp%20DESC HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/painel/"
+2022/03/14 04:17:52 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'EvaluationsDocumentalService' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/layouts/parts/contents/documentalPDF.php on line 13
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. MapasCulturais\App->run() /var/www/html/mapasculturais/src/index.php:4
+PHP message: PHP   3. MapasCulturais\App->run() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:572
+PHP message: PHP   4. Slim\Middleware\PrettyExceptions->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1300
+PHP message: PHP   5. MapasCulturais\Middlewares\ExecutionTime->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php:67
+PHP message: PHP   6. Slim\Middleware\MethodOverride->call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Middlewares/ExecutionTime.php:44
+PHP message: PHP   7. Slim\Middleware\Flash->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/MethodOverride.php:92
+PHP message: PHP   8. MapasCulturais\App->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/Flash.php:85
+PHP message: PHP   9. Slim\Route->dispatch() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1355
+PHP message: PHP  10. call_user_func_array:{/var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  11. MapasCulturais\RoutesManager->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/RoutesManager.php:41-123}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  12. MapasCulturais\RoutesManager->callAc
+2022/03/14 04:19:03 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:19:03 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:19:03 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:19:03 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'EvaluationsDocumentalService' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/layouts/parts/contents/documentalPDF.php on line 13
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. MapasCulturais\App->run() /var/www/html/mapasculturais/src/index.php:4
+PHP message: PHP   3. MapasCulturais\App->run() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:572
+PHP message: PHP   4. Slim\Middleware\PrettyExceptions->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1300
+PHP message: PHP   5. MapasCulturais\Middlewares\ExecutionTime->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php:67
+PHP message: PHP   6. Slim\Middleware\MethodOverride->call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Middlewares/ExecutionTime.php:44
+PHP message: PHP   7. Slim\Middleware\Flash->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/MethodOverride.php:92
+PHP message: PHP   8. MapasCulturais\App->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/Flash.php:85
+PHP message: PHP   9. Slim\Route->dispatch() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1355
+PHP message: PHP  10. call_user_func_array:{/var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  11. MapasCulturais\RoutesManager->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/RoutesManager.php:41-123}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  12. MapasCulturais\RoutesManager->callAc
+2022/03/14 04:20:26 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:20:26 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:20:26 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:20:36 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:20:36 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:20:36 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:20:51 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'DocumentalDB' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php on line 4
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. class_exists() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   5. spl_autoload_call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   6. MapasCulturais\App->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:260-291}() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:465
+PHP message: PHP   7. require_once() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:264
+PHP message: PHP   8. require_once() /var/www/html/mapasculturais/src/protected/application/plugins/Report/Plugin.php:5" while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:20:51 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 123
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:123" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:20:51 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/mapasculturais/src/protected/application/plugins/Report/services/EvaluationsDocumentalService.php:4) in /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php on line 124
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\AuthProviders\Fake->setCookies() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:537
+PHP message: PHP   5. setcookie() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/AuthProvider.php:124" while reading upstream, client: 172.23.0.1, server: localhost, request: "POST /reportEvaluationDocumental/reportDocumental/1544/ HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/oportunidade/1544"
+2022/03/14 04:26:38 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'EvaluationsDocumentalService' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/layouts/parts/contents/documentalPDF.php on line 13
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. MapasCulturais\App->run() /var/www/html/mapasculturais/src/index.php:4
+PHP message: PHP   3. MapasCulturais\App->run() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:572
+PHP message: PHP   4. Slim\Middleware\PrettyExceptions->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1300
+PHP message: PHP   5. MapasCulturais\Middlewares\ExecutionTime->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php:67
+PHP message: PHP   6. Slim\Middleware\MethodOverride->call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Middlewares/ExecutionTime.php:44
+PHP message: PHP   7. Slim\Middleware\Flash->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/MethodOverride.php:92
+PHP message: PHP   8. MapasCulturais\App->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/Flash.php:85
+PHP message: PHP   9. Slim\Route->dispatch() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1355
+PHP message: PHP  10. call_user_func_array:{/var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  11. MapasCulturais\RoutesManager->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/RoutesManager.php:41-123}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  12. MapasCulturais\RoutesManager->callAc
+2022/03/14 04:28:10 [error] 8#8: *111 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'EvaluationsDocumentalService' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/layouts/parts/contents/documentalPDF.php on line 5
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. MapasCulturais\App->run() /var/www/html/mapasculturais/src/index.php:4
+PHP message: PHP   3. MapasCulturais\App->run() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:572
+PHP message: PHP   4. Slim\Middleware\PrettyExceptions->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1300
+PHP message: PHP   5. MapasCulturais\Middlewares\ExecutionTime->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php:67
+PHP message: PHP   6. Slim\Middleware\MethodOverride->call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Middlewares/ExecutionTime.php:44
+PHP message: PHP   7. Slim\Middleware\Flash->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/MethodOverride.php:92
+PHP message: PHP   8. MapasCulturais\App->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/Flash.php:85
+PHP message: PHP   9. Slim\Route->dispatch() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1355
+PHP message: PHP  10. call_user_func_array:{/var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  11. MapasCulturais\RoutesManager->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/RoutesManager.php:41-123}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  12. MapasCulturais\RoutesManager->callAct
+2022/03/14 04:40:27 [error] 8#8: *185 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'EvaluationsDocumentalService' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/layouts/parts/contents/documentalPDF.php on line 5
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. MapasCulturais\App->run() /var/www/html/mapasculturais/src/index.php:4
+PHP message: PHP   3. MapasCulturais\App->run() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:572
+PHP message: PHP   4. Slim\Middleware\PrettyExceptions->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1300
+PHP message: PHP   5. MapasCulturais\Middlewares\ExecutionTime->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php:67
+PHP message: PHP   6. Slim\Middleware\MethodOverride->call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Middlewares/ExecutionTime.php:44
+PHP message: PHP   7. Slim\Middleware\Flash->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/MethodOverride.php:92
+PHP message: PHP   8. MapasCulturais\App->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/Flash.php:85
+PHP message: PHP   9. Slim\Route->dispatch() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1355
+PHP message: PHP  10. call_user_func_array:{/var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  11. MapasCulturais\RoutesManager->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/RoutesManager.php:41-123}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  12. MapasCulturais\RoutesManager->callAct
+2022/03/14 04:42:27 [error] 8#8: *185 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'EvaluationsDocumentalService' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/layouts/parts/contents/documentalPDF.php on line 5
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. MapasCulturais\App->run() /var/www/html/mapasculturais/src/index.php:4
+PHP message: PHP   3. MapasCulturais\App->run() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:572
+PHP message: PHP   4. Slim\Middleware\PrettyExceptions->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1300
+PHP message: PHP   5. MapasCulturais\Middlewares\ExecutionTime->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php:67
+PHP message: PHP   6. Slim\Middleware\MethodOverride->call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Middlewares/ExecutionTime.php:44
+PHP message: PHP   7. Slim\Middleware\Flash->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/MethodOverride.php:92
+PHP message: PHP   8. MapasCulturais\App->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/Flash.php:85
+PHP message: PHP   9. Slim\Route->dispatch() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1355
+PHP message: PHP  10. call_user_func_array:{/var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  11. MapasCulturais\RoutesManager->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/RoutesManager.php:41-123}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  12. MapasCulturais\RoutesManager->callAct
+2022/03/14 04:43:22 [error] 8#8: *185 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'EvaluationsDocumentalService' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/layouts/parts/contents/documentalPDF.php on line 5
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. MapasCulturais\App->run() /var/www/html/mapasculturais/src/index.php:4
+PHP message: PHP   3. MapasCulturais\App->run() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:572
+PHP message: PHP   4. Slim\Middleware\PrettyExceptions->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1300
+PHP message: PHP   5. MapasCulturais\Middlewares\ExecutionTime->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php:67
+PHP message: PHP   6. Slim\Middleware\MethodOverride->call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Middlewares/ExecutionTime.php:44
+PHP message: PHP   7. Slim\Middleware\Flash->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/MethodOverride.php:92
+PHP message: PHP   8. MapasCulturais\App->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/Flash.php:85
+PHP message: PHP   9. Slim\Route->dispatch() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1355
+PHP message: PHP  10. call_user_func_array:{/var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  11. MapasCulturais\RoutesManager->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/RoutesManager.php:41-123}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  12. MapasCulturais\RoutesManager->callAct
+2022/03/14 04:46:15 [error] 8#8: *185 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'EvaluationsDocumentalService' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/layouts/parts/contents/documentalPDF.php on line 5
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. MapasCulturais\App->run() /var/www/html/mapasculturais/src/index.php:4
+PHP message: PHP   3. MapasCulturais\App->run() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:572
+PHP message: PHP   4. Slim\Middleware\PrettyExceptions->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1300
+PHP message: PHP   5. MapasCulturais\Middlewares\ExecutionTime->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php:67
+PHP message: PHP   6. Slim\Middleware\MethodOverride->call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Middlewares/ExecutionTime.php:44
+PHP message: PHP   7. Slim\Middleware\Flash->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/MethodOverride.php:92
+PHP message: PHP   8. MapasCulturais\App->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/Flash.php:85
+PHP message: PHP   9. Slim\Route->dispatch() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1355
+PHP message: PHP  10. call_user_func_array:{/var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  11. MapasCulturais\RoutesManager->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/RoutesManager.php:41-123}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  12. MapasCulturais\RoutesManager->callAct
+2022/03/14 04:55:56 [error] 8#8: *185 FastCGI sent in stderr: "PHP message: PHP Warning:  The use statement with non-compound name 'EvaluationsDocumentalService' has no effect in /var/www/html/mapasculturais/src/protected/application/plugins/Report/layouts/parts/contents/documentalPDF.php on line 5
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. MapasCulturais\App->run() /var/www/html/mapasculturais/src/index.php:4
+PHP message: PHP   3. MapasCulturais\App->run() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:572
+PHP message: PHP   4. Slim\Middleware\PrettyExceptions->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1300
+PHP message: PHP   5. MapasCulturais\Middlewares\ExecutionTime->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php:67
+PHP message: PHP   6. Slim\Middleware\MethodOverride->call() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/Middlewares/ExecutionTime.php:44
+PHP message: PHP   7. Slim\Middleware\Flash->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/MethodOverride.php:92
+PHP message: PHP   8. MapasCulturais\App->call() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Middleware/Flash.php:85
+PHP message: PHP   9. Slim\Route->dispatch() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Slim.php:1355
+PHP message: PHP  10. call_user_func_array:{/var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  11. MapasCulturais\RoutesManager->MapasCulturais\{closure:/var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/RoutesManager.php:41-123}() /var/www/html/mapasculturais/src/protected/vendor/slim/slim/Slim/Route.php:468
+PHP message: PHP  12. MapasCulturais\RoutesManager->callAct
