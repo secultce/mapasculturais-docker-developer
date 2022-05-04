@@ -14,3 +14,7 @@
 2022/03/03 01:43:52 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:27
 2022/03/03 01:45:48 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:27
 2022/03/03 01:46:54 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:27
+2022/05/04 13:24:32 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:27
+2022/05/04 14:36:30 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:27
+2022/05/04 14:38:00 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:27
+2022/05/04 14:38:39 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:27
